@@ -56,12 +56,12 @@ function playRound(playerSelection, computerSelection) {//player selection to lo
 }    /*Tlhis is me trying to figure out how to loop the rounds and rng for enemy selection.
 */
     
-let playerScore = 0; //score starts at zero for both player and cpu
-let cpuScore = 0;
-let roundNumber = 0;
+var playerScore = 0; //score starts at zero for both player and cpu
+var cpuScore = 0;
+var roundNumber = 0;
 
-let playerSelection = prompt("Rock, Paper or Scissors?"); //player input i nto text box determines the player choice
-let computerSelection = computerPlay(); //cpu selection is determined by the function computerPlay (random)
+var playerSelection = prompt("Rock, Paper or Scissors?"); //player input i nto text box determines the player choice
+var computerSelection = computerPlay(); //cpu selection is determined by the function computerPlay (random)
 
 
      
@@ -77,20 +77,32 @@ function computerPlay() {// Random selection for CPU
       
     return (randomItem, selection[randomItem]);
     
-}
-function game(){
-for  (let i = 0; i < 5; i++) {
+}  
+
    
-    computerPlay();
-    prompt();
-   return (playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
+   console.log(playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
         ". Current Scores - Player Score: " + " " + playerScore + " " + "CPU Score: " + cpuScore + " " + "Round: " + roundNumber );
 
-}
+        prompt  ();
+
+   
+
+        console.log(playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
+        ". Current Scores - Player Score: " + " " + playerScore + " " + "CPU Score: " + cpuScore + " " + "Round: " + roundNumber );
+
+        prompt  ();
+
+        console.log(playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
+        ". Current Scores - Player Score: " + " " + playerScore + " " + "CPU Score: " + cpuScore + " " + "Round: " + roundNumber );
+
+        prompt  ();
+
+        console.log(playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
+        ". Current Scores - Player Score: " + " " + playerScore + " " + "CPU Score: " + cpuScore + " " + "Round: " + roundNumber );
+
+      ;
+
     
-}
- game ();
-    console.log(game)
 
 /*console.log ("Game Over! Final Scores Player Score:" + playerScore + " CPU Score:" + cpuScore)*/
 
