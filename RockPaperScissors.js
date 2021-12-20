@@ -2,20 +2,22 @@
 
 
 
+
 let playerScore = 0; //score starts at zero for both player and cpu
 let cpuScore = 0;
 let playerSelection = prompt("Rock, Paper or Scissors?"); //player input into text box determines the player choice
 let computerSelection = computerPlay(); //cpu selection is determined by the function computerPlay (random)
 
+
 function computerPlay() {// Random selection for CPU 
 
-
+    
     const selection = ["rock", "paper", "scissors"];
+  
     const randomItem = [Math.floor(Math.random() * selection.length)];
      return (randomItem, selection[randomItem])
     
-    }
-
+}
 
 
 /* These blocks have been commented out because they are improperly implemented.
@@ -74,11 +76,15 @@ function playRound(playerSelection, computerSelection) {//player selection to lo
         
 }    /*Tlhis is me trying to figure out how to loop the rounds and rng for enemy selection.
 */
-        console.log(playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
-    ". Current Scores - Player Score: " + " " + playerScore + " " + "CPU Score: " + cpuScore)
-            
-  
-
     
+for (let i = 0; i < 5; i++) {
+        console.log(playRound(playerSelection, computerSelection) +" " + "CPU chose" + " " + computerSelection + //prints plays and scores
+    ". Current Scores - Player Score: " + " " + playerScore + " " + "CPU Score: " + cpuScore);
+    prompt();
+     computerPlay();
+}
+     
+    
+
 /*console.log ("Game Over! Final Scores Player Score:" + playerScore + " CPU Score:" + cpuScore)*/
 
