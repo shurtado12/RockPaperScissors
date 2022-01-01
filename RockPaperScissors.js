@@ -4,7 +4,7 @@
 
 
 
-
+function game (){
 
         
 function playRound0 (playerSelection0, computerSelection0) {//player selection to lower case makes player input case insensitive.
@@ -362,6 +362,9 @@ var playerSelection3 = prompt ("Round 4: Rock, Paper, or Scissors?");
 
     
 
-console.log ("Game Over! Final Scores Player Score:" + playerScore + " CPU Score:" + cpuScore)
+console.log ("Game Over! Final Scores Player Score:" + playerScore + " CPU Score:" + cpuScore);
+
+}
 
 
+game ();
